@@ -1,0 +1,64 @@
+*vim-espeak.txt*   Plugin for interfacing with espeak text-to-speech system.
+
+Author: wolandark
+License: MIT
+Repository: https://github.com/wolandark/vim-espeak
+
+==============================================================================
+CONTENTS                                             *vim-espeak-contents*
+
+1. Introduction ................................ |vim-espeak-introduction|
+2. Configuration ............................... |vim-espeak-configuration|
+3. Functions ................................... |vim-espeak-functions|
+4. Mappings .................................... |vim-espeak-mappings|
+
+==============================================================================
+1. Introduction                                   *vim-espeak-introduction*
+
+This plugin is a simple wrapper over the espeak text-to-speech system.
+espeak repository: https://espeak.sourceforge.net/
+
+==============================================================================
+2. Configuration                                  *vim-espeak-configuration*
+
+To use this plugin, you can configure the following variables:
+
+- g:espeak: espeak command to use, including language and voice arguments
+default is:
+let g:espeak = 'espeak -v en'
+==============================================================================
+3. Functions                                      *vim-espeak-functions*
+
+The following functions are provided by this plugin:
+
+- `PassVisualSelection()`: Utility function to get the visual selection.
+
+- `SpeakWord()`: Speak the word under the cursor.
+  Usage: `:call SpeakWord()`
+
+- `SpeakCurrentLine()`: Speak the current line.
+  Usage: `:call SpeakCurrentLine()`
+
+- `SpeakCurrentParagraph()`: Speak the current paragraph.
+  Usage: `:call SpeakCurrentParagraph()`
+
+- `SpeakVisualSelection()`: Speak the visual selection.
+  Usage: `:call SpeakVisualSelection()`
+
+- `SpeakCurrentFile()`: Speak the current file.
+  Usage: `:call SpeakCurrentFile()`
+
+==============================================================================
+4. Mappings                                       *vim-espeak-mappings*
+
+The following mappings are defined by default:
+
+- `<Leader>tw`: Call `SpeakWord()`
+- `<Leader>tc`: Call `SpeakCurrentLine()`
+- `<Leader>tp`: Call `SpeakCurrentParagraph()`
+- `<Leader>tf`: Call `SpeakCurrentFile()`
+- `<Leader>tv`: Call `SpeakCurrentFile()`
+
+==============================================================================
+
+vim:tw=78:sw=2:ts=2:ft=help:norl:nowrap:
