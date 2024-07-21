@@ -61,18 +61,6 @@ The following mappings are defined by default:
 - nnoremap <Leader>tf :call SpeakCurrentFile()<CR>
 - vnoremap <Leader>tv :call SpeakVisualSelection()<CR>
 
-# Demo
-### SpeakWord()
-
-### SpeakCurrentLine()
-
-### SpeakCurrentParagraph()
-
-### SpeakCurrentFile()
-
-### SpeakVisualSelection()
-
-
 # License
 Same as Vim.
 
